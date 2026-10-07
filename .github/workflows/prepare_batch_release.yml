@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     name: "Release a new version"
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2.8.0
         with:
           token: ${{ secrets.GH_RELEASE_PAT }}
           fetch-depth: 0
       - name: Prepare release
-        uses: getsentry/action-prepare-release@v1
+        uses: getsentry/action-prepare-release@c8e1c2009ab08259029170132c384f03c1064c0e # v1.6.6
         env:
           GITHUB_TOKEN: ${{ secrets.GH_RELEASE_PAT }}
         with:

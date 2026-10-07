@@ -22,15 +22,15 @@ jobs:
           - ruby_version: '3.0'
             env: RUBYOPT="--enable-frozen-string-literal --debug=frozen-string-literal"
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@50fbc622fc4ef5163becd7fab6573eac35f8462e # v1.2.0
     - name: Set up Ruby ${{ matrix.ruby_version }}
-      uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@14594264cd68ce8a2345dd349bc3d138a4ef85c8 # v1.327.0
       with:
         bundler: 1
         ruby-version: ${{ matrix.ruby_version }}
 
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.1.0
+      uses: supercharge/redis-github-action@bc274cb7238cd63a45029db04ee48c07a72609fd # 1.8.1
       with:
         redis-version: 5
 
