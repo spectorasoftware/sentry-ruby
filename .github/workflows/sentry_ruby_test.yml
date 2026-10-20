@@ -26,10 +26,10 @@ jobs:
           - { os: ubuntu-latest, ruby_version: '3.0', options: { rubyopt: "--enable-frozen-string-literal --debug=frozen-string-literal" } }
           - { os: ubuntu-latest, ruby_version: '3.0', options: { without_rack: 1 } }
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@50fbc622fc4ef5163becd7fab6573eac35f8462e # v1.2.0
 
     - name: Set up Ruby ${{ matrix.ruby_version }}
-      uses: ruby/setup-ruby@v1
+      uses: ruby/setup-ruby@14594264cd68ce8a2345dd349bc3d138a4ef85c8 # v1.327.0
       with:
         bundler: 1
         ruby-version: ${{ matrix.ruby_version }}
